@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+</head>
+<body>
+  <h1>Welcome, <%= user.username%><h1>
+
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="profilePic" accept="image/*" required>
+    <button type="submit">Upload Profile Picture</button>
+  </form>
+
+  <% if (user.profilePic) { %>
+    <h3>Your Picture:</h3>
+    <img src="/uploads/<%= user.profilePic %>" width="150">
+  <% } else { %>
+    <p>No profile picture uploaded.</p>
+  <% } %>
+</body>
+</html>
