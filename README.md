@@ -1,104 +1,108 @@
-# Login Application (MERN Stack)
+# 🔐 Login Application (MERN Stack)
 
-![ScreenShot Tool -20250107043508](https://github.com/user-attachments/assets/c1cfddea-af89-4f62-8d39-bd8baf882cf1)
+![Login Screenshot](https://github.com/user-attachments/assets/c1cfddea-af89-4f62-8d39-bd8baf882cf1)
 
-## Project Overview
+## 📌 Overview
 
-This is a simple Login and Registration system built using **Node.js**, **Express.js**, **MongoDB**, and **EJS** templating engine. It allows users to register, log in, and access a dashboard page after successfully logging in. This project demonstrates how to create a secure authentication system with password hashing and user data management using MongoDB.
+A simple and secure Login & Registration system built using **Node.js**, **Express.js**, **MongoDB**, and **EJS**. Users can register, log in, and access a dashboard. This project demonstrates secure authentication practices using bcrypt, JWT, and validation.
+
+---
 
 <div align="center">
-  <h3> Contributed Using These Languages </h3>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="JavaScript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="HTML5" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="CSS3" />
-  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/express/express-original.svg" height="30" alt="Express" />
-  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/docker/docker-original.svg" height="30" alt="Docker" />
-  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/nodejs/nodejs-plain-wordmark.svg" height="30" alt="NodeJS" />
-  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/mongodb/mongodb-plain-wordmark.svg" height="30" alt="mongodb" />
+  <h3>🔧 Built With</h3>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/express/express-original.svg" height="30" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/nodejs/nodejs-plain-wordmark.svg" height="30" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/mongodb/mongodb-plain-wordmark.svg" height="30" />
+  <img src="https://github.com/devicons/devicon/blob/v2.16.0/icons/docker/docker-original.svg" height="30" />
 </div>
 
-<br>
+---
 
-The project covers essential aspects of web development, such as user authentication, data validation, form handling, and error handling. It follows common practices for building secure, scalable web applications with JavaScript.
+## ✅ Features
 
-## Features
+- 🔐 **Secure User Registration & Login**
+- 📄 **Hashed Passwords (bcryptjs)**
+- 🧠 **Session Management with JWT**
+- 🔍 **Input Validation with validator.js**
+- 🔒 **Security Headers with Helmet**
+- 📦 **MongoDB Integration with Mongoose**
+- 🧰 **Modular Project Structure**
 
-- **User Registration**: Allows users to create an account with a unique username and secure password.
-- **User Login**: Authenticates users by checking credentials and comparing hashed passwords in MongoDB.
-- **Dashboard**: After login, users are redirected to a dashboard displaying their name.
-- **Password Hashing**: Passwords are hashed using **bcryptjs** before storing in the database.
-- **Validation & Error Handling**: Catches invalid inputs and provides user-friendly feedback.
-- **Session Management**: JWT is used to manage session logic securely.
+---
 
+## 🧪 Security Highlights
 
-## Technologies Used
+- Passwords hashed using **bcrypt**.
+- Secure headers via **Helmet** middleware.
+- Inputs sanitized and validated.
+- Environment variables used for sensitive config.
+- JWT tokens used for session control.
 
-- **Node.js**
-- **Express.js**
-- **MongoDB**
-- **Mongoose**
-- **bcryptjs**
-- **EJS**
-- **Helmet**
-- **jsonwebtoken**
-- **Validator.js**
+---
 
-## Security Notes
-- Passwords are hashed using bcrypt before storage.
-- HTTP headers are secured using helmet middleware.
-- Input validation implemented to prevent injection attacks.
-- Sensitive data is stored using environment variables.
+## 🗂️ Project Structure
 
-
-
-## Project Structure
-
-. ├── config.js
-├── index.js
-├── package.json
-├── package-lock.json
-├── node_modules/
+```
+.
+├── config.js             # MongoDB connection
+├── index.js              # Main app logic & routes
+├── package.json          # Dependencies & metadata
+├── package-lock.json     # Dependency lock
+├── node_modules/         # Installed packages
 ├── public/
-│ └── styles.css
+│   └── styles.css        # Custom styling
 └── views/
-├── login.ejs
-├── register.ejs
-└── dashboard.ejs
+    ├── login.ejs         # Login page
+    ├── register.ejs      # Registration page
+    └── dashboard.ejs     # Post-login dashboard
+```
 
+---
 
-## How to Run the Project
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
-- Node.js
-- MongoDB (local or MongoDB Atlas)
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/) (local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
 
-### Steps
+### 🛠️ Setup
 
 ```bash
 git clone https://github.com/ifra489/CyberSecurity-internship-task.git
 cd CyberSecurity-internship-task
 npm install
 ```
-1.Update MongoDB URI in config.js
 
-2.Run the app:
+1. Set your MongoDB connection URI inside `config.js`.
+2. Start the server:
 
-```
+```bash
 npm start
 ```
-**Visit http://localhost:3000 to use the app.**
 
-## Verifying with MongoDB
-Use the MongoDB shell or Compass:
-```
+🔗 Visit: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🗃️ Verifying MongoDB Data
+
+You can verify users in MongoDB using the shell or MongoDB Compass:
+
+```bash
 use Credentials
 show collections
 db.users.find().pretty()
-
 ```
-## Acknowledgement
-This project was adapted from an open-source Express.js authentication system.
-The original repository/author is currently unknown. If identified, proper credit will be added.
 
-This version includes customizations and security enhancements for a Cybersecurity internship task.
+---
+
+## 🙏 Acknowledgement
+
+This project was adapted from an existing Express-based authentication project.  
+The original author is unknown; if identified, full credit will be added.
+
+> ✨ Customized for a **Cybersecurity Internship Task** with added security enhancements and structure.
